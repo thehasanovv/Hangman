@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assert/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header class="wrapper">
+        <h1>Hangman</h1>
+        <p>80s style</p>
+    </header>
+
+    <div class="game-container">
+        <div class="result">
+            <div>
+                <img id="displayImg" src="/assert/images/hangman.jpg" alt="">
+            </div>
+            <div class="band-info">
+                <h2 class="band-name"></h2>
+                <p class='genres'></p>
+                <p class='years-active'></p>
+                <p class='members'></p>
+                <p></p>
+            </div>
+        </div>
+        <div class="guess">
+            <div class="guess-container">
+                <h2>Press any key to get started!</h2>
+                <div class="current-score">
+                    <p class="sectiohead-header">Wins</p>
+                    <p class="wins">0</p>
+                </div>
+                <div class="current-word">
+                    <p class="sectiohead-header">Current word</p>
+                    <p class="secret-word"></p>
+                </div>
+                <div class="number-of-guesses-remaining">
+                    <p class="sectiohead-header">Number of guesses remaining</p>
+                    <p id="guess">10</p>
+                </div>
+                <div class="already-guessed">
+                    <p class="sectiohead-header">Letters already guessed</p>
+                    <p class="letters-already-guessed">&nbsp</p>
+                </div>
+                <div>
+                    <p class="winOrLose">&nbsp</p>
+                </div>
+                <div class="buttons">
+                    <button class="btns-css reset-game">Reset game</button>
+                    <button class="btns-css game-intro">Game intro</button>
+                    <button class="btns-css display--none" id="play-again">Play Again</button>
+                </div>
+            </div>
+        </div>
+        <!-- Game intro -->
+        <div class="modal display--none">
+            <button class="close-modal">&times;</button>
+            <h1>Game intro😍</h1>
+            <h2>History</h2>
+            <br>
+            <p>Though the origins of the game are unknown, a variant is mentioned in a book of children's games
+                assembled by Alice Gomme in 1894 called Birds, Beasts, and Fishes.[1] This version lacks the image
+                of a hanged man, instead relying on keeping score as to the number of attempts it took each player
+                to fill in the blanks.</p>
+        </div>
+        <div class="overlay display--none"></div>
+    </div>
+
+    <script src='./script/main.js'></script>
+    <script src='./script/test.js'></script>
+
+</body>
+
+</html>
