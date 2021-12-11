@@ -4,7 +4,7 @@ const lowerAlph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 
 var wordList = {
     radiohead: {
-        picture: `/assert/images/radiohead.jpg`,
+        picture: `./assert/images/radiohead.jpg`,
         genres: `Genres: Art rock, alternative rock, electronic, aexperimental rock`,
         years_active: `Years:
          1985–present`,
@@ -177,7 +177,7 @@ function game() {
         // If is game true, the game continues
         if (isGame) {
             if (onScreen && lowerAlph.includes(userChoise)) {
-                secret_word.innerHTML = onScreen;
+                secret_word.textContent = onScreen;
                 console.log(secret_word.innerHTML)
                 getUnique(userChoise) // => Display already guessed letters
                 // If player wins
