@@ -72,14 +72,14 @@ const init = function () {
     randomValue = randomObj[1]
     selectedWord = randomObj[0]
     // selectedWord = wordList[Math.floor(Math.random() * wordList.length)]
-    document.getElementById('displayImg').src = '/assert/images/hangman.jpg'
+    document.getElementById('displayImg').src = './assert/images/hangman.jpg'
 
 
     //Display a hyphen on the screen
     for (var i = 0; i < selectedWord.length; i++) {
-        displayWord[i] = '-'
+        displayWord[i] = ' _ '
         currentWord.push(selectedWord[i])
-        secret_word.innerHTML += "-"
+        secret_word.innerHTML += displayWord[i]
     }
     // If a player wins or loses, change the background color
     document.querySelector(`body`).classList.remove('player--winner');
@@ -178,7 +178,6 @@ function game() {
         if (isGame) {
             if (onScreen && lowerAlph.includes(userChoise)) {
                 secret_word.textContent = onScreen;
-                console.log(secret_word.innerHTML)
                 getUnique(userChoise) // => Display already guessed letters
                 // If player wins
                 if (onScreen === selectedWord) {
